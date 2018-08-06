@@ -11,8 +11,8 @@ import { NewUserComponent } from './new-user/new-user.component';
 import { PlaygroundComponent } from './playground/playground.component';
 import { GameOverComponent } from './game-over/game-over.component';
 
-const config: SocketIoConfig = { url: 'http://10.0.0.44:5000', options: {} };
-// const config: SocketIoConfig = { url: 'http://area50plus1.com', options: {} };
+// const config: SocketIoConfig = { url: 'http://10.0.0.44:5000', options: {} };
+const config: SocketIoConfig = { url: 'http://area50plus1.com', options: {} };
 
 @NgModule({
   declarations: [
