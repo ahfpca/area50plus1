@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: black;
+}
+
+.screen {
+    display: inline-block;
+    width: 1280px;
+    height: 760px;
+}
+
+.leftPart {
+    display: inline-block;
+    vertical-align: top;
+    width: 960px;
+    height: 760px;
+}
+
+.rightPart {
+    vertical-align: top;
+    display: inline-block;
+    background-color: cornsilk;
+    width: 316px;
+    height: 760px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.textMargin {
+    margin: 5px 0px;
+}
+
+#miniMap {
+    position: relative;
+    left: 8px;
+    width: 300px;
+    height: 200px;
+    background-repeat: no-repeat;
+}
+
+.separator {
+    border-bottom: 1px brown solid;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#miniHeroSS {
+    position: relative;
+    border: 2px greenyellow solid;
+    width: 16px;
+    height: 16px;
+    left: 40px;
+    top: 30px;
+}
+
+#miniArea {
+    position: relative;
+    border: 2px greenyellow solid;
+    width: 96px;
+    height: 76px;
+}
+
+.playerInfoPanel {
+    width: 960px;
+    height: 70px;
+    background-color: rgb(252, 233, 157);
+}
+
+#playWindow {
+    width: 960px;
+    height: 690px;
+}
+
+.playGround {
+    position: relative;
+    width: 3000px;
+    height: 2000px;
+    background-repeat: no-repeat;
+}
+
+#hero {
+    left: 100px;
+    top: 400px;
+}
+
+.player {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+
+/********************************************/
+/****** Fix the table's header - BEGIN ******/
+/********************************************/
+table {
+    font-size: 1.3em;
+    color: rgb(49, 0, 0);
+    margin: 5px 12px;
+    border: 2px brown solid;
+}
+
+thead, tbody, tr, td, th { 
+    display: block;
+}
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+tbody {
+    height: 200px;
+    overflow-y: auto;
+}
+
+thead {
+    background-color: rgb(163, 100, 100);
+}
+
+
+tbody td, thead th {
+    width: 50%;
+    float: left;
+}
+
+tbody tr {
+    height: 45px;
+}
+/******************************************/
+/****** Fix the table's header - END ******/
+/******************************************/

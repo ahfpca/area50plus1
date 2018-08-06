@@ -1,0 +1,78 @@
+´<div class="screen">
+    <div class="leftPart">
+        <div class="playerInfoPanel">
+            <div>
+                <h4 class="infoTitle">{{ user.user_name }}</h4>
+                <!-- <h2 class="gameOver">{{ gameOver ? 'GAME OVER!' : '' }}</h2> -->
+            </div>
+            <div class="infoSection">
+                <div class="infoText">
+                    Shots fired: <span class="infoVal">{{ shotsCount }}</span>
+                </div>
+                <div class="infoText">
+                    Enemy Hits: <span class="infoVal">{{ enemyHits }}</span>
+                </div>
+                <div class="infoText">
+                    Friendly Hits: <span class="infoVal">{{ friendlyHits }}</span>
+                </div>
+                <div class="infoText">
+                    Accuracy: <span class="infoVal">{{ shotsCount === 0 ? '0.0' : ((enemyHits - friendlyHits) * 100 / shotsCount).toFixed(1) }} %</span>
+                </div>
+            </div>
+        </div>
+        <div id="playWindow" style="overflow:hidden;">
+            <div id="playGround" style="left: -2520px; top: -1655px;
+                background-image: url('./../../assets/images/BG1.jpg');">
+                <img class="player" id="hero" [ngStyle]="{ 'position':
+                    'absolute', 'left': shipLeft + 'px', 'top': shipTop + 'px' }" 
+                    [src]="shipFile" alt="spaceship">
+            </div>
+        </div>
+    </div>
+    <!-- Players Panel -->
+    <div class="rightPart">
+        <!-- Mini Map -->
+        <div>
+            <h3 class="textCenter textMargin">Map</h3>
+            <div id="miniMap" style="width: 300px; height: 200px;
+                background-image: url('./../../assets/images/BG1sm.jpg');">
+                <div id="miniArea">
+                    <img id="miniHeroSS" [src]="shipFile" alt="SS01UP.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="textCenter">
+            <div class="friendlyLegend" style="width: 15px; height: 15px;"></div>
+            <div class="legendText">Are Friendly</div>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <div class="enemyLegend" style="width: 15px; height: 15px;"></div>
+            <div class="legendText">Are Enemy</div>
+        </div>
+        <div class="separator"></div>
+
+        <!-- Players List -->
+        <div>
+            <h3 class="textCenter">Players</h3>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Energy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rec of players">
+                        <td>{{ rec.name }}</td>
+                        <td>{{ rec.energy }} %</td>
+                        <!-- <td>{{ rec.energy.toFixed(1) }} %</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

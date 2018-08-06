@@ -1,0 +1,193 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+}
+
+.screen {
+    display: inline-block;
+    width: 1280px;
+    height: 760px;
+    background-color: black;
+}
+
+.leftPart {
+    display: inline-block;
+    vertical-align: top;
+    width: 960px;
+    height: 760px;
+}
+
+.rightPart {
+    display: inline-block;
+    vertical-align: top;
+    background-color: cornsilk;
+    width: 316px;
+    height: 760px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.textMargin {
+    margin: 5px 0px;
+}
+
+.legendText {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 0.5em;
+    margin-left: 5px;
+}
+
+#miniMap {
+    position: relative;
+    left: 8px;
+    width: 300px;
+    height: 200px;
+    background-repeat: no-repeat;
+}
+
+.separator {
+    border-bottom: 1px brown solid;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#miniHeroSS {
+    position: absolute;
+    border: 2px greenyellow solid;
+    width: 8px;
+    height: 8px;
+    left: 16px;
+    top: 9px;
+}
+
+.friendlyLegend {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: lightgreen;
+}
+
+.enemyLegend {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: red;
+}
+
+#miniArea {
+    position: relative;
+    border: 2px greenyellow solid;
+    width: 44px;
+    height: 30px;
+}
+
+.playerInfoPanel {
+    display: inline-block;
+    width: 960px;
+    height: 70px;
+    background-color: rgb(252, 233, 157);
+}
+
+#playWindow {
+    width: 960px;
+    height: 690px;
+}
+
+#playGround {
+    position: relative;
+    width: 6000px;
+    height: 4000px;
+    background-repeat: no-repeat;
+}
+
+#hero {
+    left: 100px;
+    top: 400px;
+}
+
+.player {
+    /* position: relative; */
+    width: 50px;
+    height: 50px;
+}
+
+.infoTitle {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px 0px 4px 10px;
+}
+
+.gameOver {
+    display: inline-block;
+    vertical-align: middle;
+    color: red;
+    text-align: center;
+    width: 30vw;
+}
+
+.infoText {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 50px;
+    font-size: 0.75em;
+}
+
+.infoVal {
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: maroon;
+}
+
+.infoSection {
+    display: inline-block;
+}
+
+/********************************************/
+/****** Fix the table's header - BEGIN ******/
+/********************************************/
+table {
+    font-size: 1.3em;
+    color: rgb(49, 0, 0);
+    margin: 5px 12px;
+    border: 2px brown solid;
+}
+
+thead, tbody, tr, td, th { 
+    display: block;
+    text-align: center;
+}
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+tbody {
+    height: 200px;
+    overflow-y: auto;
+}
+
+thead {
+    background-color: rgb(163, 100, 100);
+}
+
+
+tbody td, thead th {
+    width: 140px;
+    float: left;
+}
+
+tbody tr {
+    height: 30px;
+}
+/******************************************/
+/****** Fix the table's header - END ******/
+/******************************************/

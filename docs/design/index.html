@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles.css">
+        <title>Area 50 Plus 1</title>
+    </head>
+    <body>
+        <div class="screen">
+            <div class="leftPart">
+                <div class="playerInfoPanel">
+                    <div>
+                        <h4>{{ user.user_name }}</h4>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div id="playWindow" style="overflow:hidden;">
+                    <div class="playGround" [ngStyle]="{ 'background-position': bigMapLeft + 'px ' + bigMapTop + 'px'; background-image: url('./../images/BG1.jpg'); }">
+                        <img class="player" id="hero" [ngStyle]="{ 'left': shipLeft + 'px', 'top': shipTop + 'px' }" [src]="shipFile" alt="spaceship">
+                    </div>
+                </div>
+            </div>
+            <!-- Players Panel -->
+            <div class="rightPart">
+                <!-- Mini Map -->
+                <div>
+                    <h3 class="textCenter textMargin">Map</h3>
+                    <div id="miniMap" style="background-image: url('./../images/BG1sm.jpg');">
+                        <div id="miniArea" [ngStyle]="{ 'left': miniAreaLeft + 'px', 'top': miniAreaTop + 'px' }">
+                            <!-- <img id="miniHeroSS" [ngStyle]="{ 'left': miniShipLeft + 'px', 'top': miniShipTop + 'px' }" [src]="shipFile" alt="SS01UP.png"> -->
+                            <!-- <img id="miniHeroSS" [src]="shipFile" alt="SS01UP.png"> -->
+                            <img id="miniHeroSS" src="./../images/SS01UP.png" alt="SS01UP.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <!-- Players List -->
+                <div>
+                    <h3 class="textCenter">Players</h3>
+                </div>
+                <div>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Energy</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let rec of players">
+                            <td>{{ rec.name }}</td>
+                            <td>{{ rec.energy }} %</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

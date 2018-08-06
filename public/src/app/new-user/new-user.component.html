@@ -1,0 +1,30 @@
+<div class="screen" style="background-image: url('./../../assets/images/NewUserPage.jpg')">
+  <br>
+  <h1 class="welcome textCenter">Welcome to Area 50+1 Game!</h1>
+  <br>
+  <h4 *ngIf="commonErrors && commonErrors['errors']['username']" class="danger">{{ commonErrors['errors']['username']['message'] }}</h4>
+  <h3>Please enter your name:</h3>
+  <input 
+      type="text" 
+      name="username" 
+      id="username"
+      [(ngModel)]="userName"
+      required
+      minlength="3"
+      #username="ngModel"
+  >
+  <br>
+  <br>
+  <h4 *ngIf="commonErrors && commonErrors['errors']['spaceship']" class="danger">{{ commonErrors['errors']['spaceship']['message'] }}</h4>
+  <h3>Select your spaceship:</h3>
+  <div class="ssList">
+      <div *ngFor="let spship of spaceships" class="ssBox">
+          <a (click)="selectSpaceShip('SpaceShip' + spship)">
+              <img class="spaceship" id="SpaceShip{{ spship }}" src="./../../assets/images/SS{{ spship }}UP.png" alt="SS{{ spship }}UP.png">
+          </a>
+      </div>
+  </div>
+  <h3 class="info">NOTE: The players with the same spaceship type are your friends so don't shoot them, or you will hurt yourself too!</h3>
+
+  <button class="btnSuccess" (click)="joinTheGame()">Join the Game</button>
+</div>

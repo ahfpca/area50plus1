@@ -1,0 +1,18 @@
+{
+    "name": "",
+    "socketId": "",
+    "posX": 0,
+    "posY": 0,
+    "health": 100,
+    "statics": {
+        "shotsFired": 0,
+        "shotsHit": {
+            "hit": 0,
+            "defended": 0
+        },
+        "shotsTook": {
+            "hit": 0,
+            "defended": 0
+        }
+    }
+}
