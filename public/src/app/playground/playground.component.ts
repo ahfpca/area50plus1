@@ -414,7 +414,7 @@ export class PlaygroundComponent implements OnInit {
         // Draw shots
         if (arr && arr.length > 0) {
             let changed = false;
-            let shotHit = false;
+            let shotHit = -1;
             let bigMap = document.getElementById('playGround').innerHTML;
 
             // Remove exploded shots from playground
@@ -522,14 +522,13 @@ export class PlaygroundComponent implements OnInit {
                                         this.friendlyHits = this.gameData[this.heroIndex].friendlyHits;
                                         this.enemyHits = this.gameData[this.heroIndex].enemyHits;
 
-                                        shotHit = true;
+                                        shotHit = 1;
                                     }
 
                                     // Check for elimination
                                     if (this.gameData[s].energy <= 0 && this.gameData[s].user_id === this.user._id) {
                                         this.gameData[s].energy = 0;
-                                        shotHit = false;
-                                        this._router.navigate(['/areas/gameover']);
+                                        shotHit = 2;
                                         break;
                                     }
                                 }
@@ -539,7 +538,11 @@ export class PlaygroundComponent implements OnInit {
                 }
             }
 
-            if (shotHit) {
+            if (shotHit === 2) {
+                this._router.navigate(['/areas/gameover']);
+            }
+
+            if (shotHit === 1) {
                 // this._socket.emit('gameDataChanged', this.gameData);
                 this._socket.emit('sendGameData', this.gameData);
                 this.idleCounter = 0;
